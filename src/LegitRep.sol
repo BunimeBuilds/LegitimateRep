@@ -70,4 +70,22 @@ contract LegitRep is Ownable, ReentrancyGuard {
 
     constructor(address _owner) Ownable(_owner) {}
 
+    function registerUser(address user) external onlyOwner {
+        if (_reputations[user].isRegistered) {
+            revert UserAlreadyRegistered(user);
+        }
+        
+        _reputations[user] = ReputationData({
+            score: INITIAL_REPUTATION,
+            totalRatings: 0,
+            totalScore: 0,
+            lastUpdateTime: block.timestamp,
+            lastDecayTime: block.timestamp,
+            isRegistered: true
+        });
+        
+        _registeredUsers.push(user);
+        
+        emit UserRegistered(user, INITIAL_REPUTATION);
+    }
 }
