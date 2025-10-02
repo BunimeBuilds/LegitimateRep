@@ -83,4 +83,8 @@ contract TestLegitRep {
 
         emit ReputationUpdated(user, oldScore, userData.score, msg.sender);
     }
+
+    function givePositiveRating(address user) external {
+        updateReputation(user, 800);
+    }
 }
