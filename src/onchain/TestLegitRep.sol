@@ -13,4 +13,11 @@ contract TestLegitRep {
     uint256 public constant INITIAL_REPUTATION = 500;
     string private info = "Version 0.0.0";
 
+
+    // Simplified struct
+    struct ReputationData {
+        uint256 score;
+        uint256 totalRatings;
+        bool isRegistered;
+    }
 }
