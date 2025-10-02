@@ -203,6 +203,10 @@ contract LegitRep is Ownable, ReentrancyGuard {
         }
     }
 
+    /**
+     * @dev Get total number of registered users
+     * @return Total user count
+     */
     function getTotalUsers() external view returns (uint256) {
         return _registeredUsers.length;
     }
