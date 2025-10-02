@@ -52,4 +52,6 @@ contract LegitRep is Ownable, ReentrancyGuard {
         uint256 newScore, 
         address indexed rater
     );
+    event ReputationDecayed(address indexed user, uint256 oldScore, uint256 newScore);
+
 }
