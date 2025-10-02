@@ -229,5 +229,17 @@ contract LegitRep is Ownable, ReentrancyGuard {
         emit AuthorizedRaterRemoved(rater);
     }
 
-
+    function updateReputationParameters(
+        uint256 _minRaterReputation,
+        uint256 _maxWeightMultiplier
+    ) external onlyOwner {
+        if (_minRaterReputation > MAX_REPUTATION || _maxWeightMultiplier < 100) {
+            revert InvalidParameters();
+        }
+        
+        minRaterReputation = _minRaterReputation;
+        maxWeightMultiplier = _maxWeightMultiplier;
+        
+        emit ReputationParametersUpdated(_minRaterReputation, _maxWeightMultiplier);
+    }
 }
