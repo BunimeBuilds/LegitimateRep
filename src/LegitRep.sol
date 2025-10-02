@@ -248,6 +248,10 @@ contract LegitRep is Ownable, ReentrancyGuard {
         emit ReputationParametersUpdated(_minRaterReputation, _maxWeightMultiplier);
     }
 
+    /**
+     * @dev Toggle reputation decay on/off
+     * @param enabled Whether decay should be enabled
+     */
     function setDecayEnabled(bool enabled) external onlyOwner {
         decayEnabled = enabled;
     }
