@@ -80,4 +80,6 @@ contract RatingSystem is Ownable, ReentrancyGuard, Pausable {
     
     // Mappings
     mapping(uint256 => Rating) public ratings;
+        mapping(address => UserRatingStats) public userStats;
+
 }
