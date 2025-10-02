@@ -65,5 +65,5 @@ contract LegitRep is Ownable, ReentrancyGuard {
         error UserAlreadyRegistered(address user);
     error InvalidReputationScore(uint256 score);
     error UnauthorizedRater(address rater);
-
+ error InvalidParameters();
 }
