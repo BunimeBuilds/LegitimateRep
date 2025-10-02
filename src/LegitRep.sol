@@ -219,4 +219,9 @@ contract LegitRep is Ownable, ReentrancyGuard {
         authorizedRaters[rater] = true;
         emit AuthorizedRaterAdded(rater);
     }
+
+    function removeAuthorizedRater(address rater) external onlyOwner {
+        authorizedRaters[rater] = false;
+        emit AuthorizedRaterRemoved(rater);
+    }
 }
