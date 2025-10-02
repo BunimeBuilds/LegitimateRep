@@ -117,4 +117,11 @@ contract RatingSystem is Ownable, ReentrancyGuard, Pausable {
         address indexed deactivatedBy,
         string reason
     );
+
+    event RatingLimitsUpdated(
+        uint256 cooldownPeriod,
+        uint256 maxRatingsPerDay,
+        uint256 minReputationToRate,
+        bool requireMinReputation
+    );
 }
