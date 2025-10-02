@@ -38,5 +38,6 @@ contract LegitRep is Ownable, ReentrancyGuard {
 
     // State Variables
         address[] private _registeredUsers;
+    uint256 public minRaterReputation = 300; // Minimum reputation to give weighted ratings
 
 }
