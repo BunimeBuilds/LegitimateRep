@@ -45,4 +45,8 @@ contract TestLegitRep {
 
         emit UserRegistered(user, INITIAL_REPUTATION);
     }
+
+    function registerSelf() public {
+        registerUser(msg.sender);
+    }
 }
