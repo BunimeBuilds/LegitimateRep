@@ -107,4 +107,19 @@ contract TestLegitRep {
     function giveNeutralRating(address user) external {
         updateReputation(user, 500);
     }
+
+    function setReputation(address user, uint256 score) external {
+        if (!_reputations[user].isRegistered) {
+            registerUser(user);
+        }
+
+        if (score > MAX_REPUTATION) {
+            score = MAX_REPUTATION;
+        }
+
+        uint256 oldScore = _reputations[user].score;
+        _reputations[user].score = score;
+
+        emit ReputationUpdated(user, oldScore, score, msg.sender);
+    }
 }
