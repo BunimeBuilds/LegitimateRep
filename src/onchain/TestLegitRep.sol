@@ -139,4 +139,11 @@ contract TestLegitRep {
         }
         return _reputations[user].score;
     }
+
+    function getReputationData(address user) external view returns (ReputationData memory) {
+        if (!_reputations[user].isRegistered) {
+            return ReputationData({score: INITIAL_REPUTATION, totalRatings: 0, isRegistered: false});
+        }
+        return _reputations[user];
+    }
 }
