@@ -23,4 +23,8 @@ contract TestLegitRep {
 
     // Mappings
     mapping(address => ReputationData) private _reputations;
+
+    // State Variables
+        address[] private _registeredUsers;
+
 }
