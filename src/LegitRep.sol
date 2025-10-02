@@ -68,4 +68,6 @@ contract LegitRep is Ownable, ReentrancyGuard {
  error InvalidParameters();
      error SelfRatingNotAllowed();
 
+    constructor(address _owner) Ownable(_owner) {}
+
 }
