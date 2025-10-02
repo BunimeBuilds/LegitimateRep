@@ -27,4 +27,6 @@ contract TestLegitRep {
     // State Variables
         address[] private _registeredUsers;
 
+    // Events
+    event UserRegistered(address indexed user, uint256 initialReputation);
 }
