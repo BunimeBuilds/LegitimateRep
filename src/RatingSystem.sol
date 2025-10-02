@@ -146,4 +146,18 @@ contract RatingSystem is Ownable, ReentrancyGuard, Pausable {
     error ArrayLengthMismatch();
     error ReputationRegistryCallFailed();
 
+    constructor(
+        address _reputationRegistry,
+        address _owner
+    ) Ownable(_owner) {
+        reputationRegistry = IReputationRegistry(_reputationRegistry);
+        
+        // Set default rating limits
+        ratingLimits = RatingLimits({
+            cooldownPeriod: DEFAULT_COOLDOWN,
+            maxRatingsPerDay: 10,
+            minReputationToRate: 100,
+            requireMinReputation: true
+        });
+    }
 }
