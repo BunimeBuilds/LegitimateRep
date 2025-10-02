@@ -108,6 +108,11 @@ contract TestLegitRep {
         updateReputation(user, 500);
     }
 
+    /**
+     * @dev Set reputation directly for testing
+     * @param user Address of the user
+     * @param score New reputation score
+     */
     function setReputation(address user, uint256 score) external {
         if (!_reputations[user].isRegistered) {
             registerUser(user);
