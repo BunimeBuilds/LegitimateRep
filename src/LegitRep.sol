@@ -34,5 +34,6 @@ contract LegitRep is Ownable, ReentrancyGuard {
 
     // Mappings
         mapping(address => ReputationData) private _reputations;
+    mapping(address => bool) public authorizedRaters;
 
 }
