@@ -31,4 +31,8 @@ contract LegitRep is Ownable, ReentrancyGuard {
         uint256 raterReputation; // Reputation of the person giving the rating
         uint256 weight;          // Calculated weight for this rating
     }
+
+    // Mappings
+        mapping(address => ReputationData) private _reputations;
+
 }
