@@ -92,6 +92,10 @@ contract TestLegitRep {
         updateReputation(user, 800);
     }
 
+    /**
+     * @dev Give a negative rating (200 points)
+     * @param user Address of the user being rated
+     */
     function giveNegativeRating(address user) external {
         updateReputation(user, 200);
     }
