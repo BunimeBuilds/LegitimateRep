@@ -131,4 +131,7 @@ contract RatingSystem is Ownable, ReentrancyGuard, Pausable {
         uint256[] scores,
         uint256 totalRatings
     );
+
+    // Errors
+    error InvalidRatingScore(uint256 score);
 }
