@@ -229,6 +229,11 @@ contract LegitRep is Ownable, ReentrancyGuard {
         emit AuthorizedRaterRemoved(rater);
     }
 
+    /**
+     * @dev Update reputation calculation parameters
+     * @param _minRaterReputation Minimum reputation for weighted ratings
+     * @param _maxWeightMultiplier Maximum weight multiplier
+     */
     function updateReputationParameters(
         uint256 _minRaterReputation,
         uint256 _maxWeightMultiplier
