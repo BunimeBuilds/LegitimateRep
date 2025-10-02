@@ -151,4 +151,8 @@ contract TestLegitRep {
         }
         return _reputations[user];
     }
+
+    function isRegistered(address user) external view returns (bool) {
+        return _reputations[user].isRegistered;
+    }
 }
