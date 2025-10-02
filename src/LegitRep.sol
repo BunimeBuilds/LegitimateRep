@@ -62,4 +62,6 @@ contract LegitRep is Ownable, ReentrancyGuard {
 
     // Errors
     error UserNotRegistered(address user);
+        error UserAlreadyRegistered(address user);
+
 }
