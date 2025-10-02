@@ -144,5 +144,6 @@ contract RatingSystem is Ownable, ReentrancyGuard, Pausable {
     error InvalidRatingUpdate();
     error EmptyCommentNotAllowed();
     error ArrayLengthMismatch();
+    error ReputationRegistryCallFailed();
 
 }
