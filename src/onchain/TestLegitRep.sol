@@ -6,4 +6,7 @@ pragma solidity ^0.8.19;
  * @dev Simplified version of ReputationRegistry for testnet testing
  * @notice Removes restrictions to allow easy testing with multiple wallets
  */
-contract TestLegitRep {}
+contract TestLegitRep {
+        // Constants for reputation calculations
+    uint256 public constant MAX_REPUTATION = 1000;
+}
