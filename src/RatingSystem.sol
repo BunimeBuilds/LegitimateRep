@@ -140,5 +140,6 @@ contract RatingSystem is Ownable, ReentrancyGuard, Pausable {
     error InsufficientReputation(uint256 current, uint256 required);
     error TooManyRatingsBetweenUsers(uint256 current, uint256 max);
     error RatingNotFound(uint256 ratingId);
+    error UnauthorizedRatingModification();
 
 }
