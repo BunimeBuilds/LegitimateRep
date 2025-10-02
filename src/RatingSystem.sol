@@ -135,4 +135,6 @@ contract RatingSystem is Ownable, ReentrancyGuard, Pausable {
     // Errors
     error InvalidRatingScore(uint256 score);
     error SelfRatingNotAllowed();
+        error RatingCooldownActive(uint256 remainingTime);
+
 }
