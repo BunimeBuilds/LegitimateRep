@@ -140,6 +140,11 @@ contract TestLegitRep {
         return _reputations[user].score;
     }
 
+    /**
+     * @dev Get detailed reputation data for a user
+     * @param user Address of the user
+     * @return ReputationData struct with all reputation information
+     */
     function getReputationData(address user) external view returns (ReputationData memory) {
         if (!_reputations[user].isRegistered) {
             return ReputationData({score: INITIAL_REPUTATION, totalRatings: 0, isRegistered: false});
