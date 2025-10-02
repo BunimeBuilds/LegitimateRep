@@ -20,4 +20,7 @@ contract TestLegitRep {
         uint256 totalRatings;
         bool isRegistered;
     }
+
+    // Mappings
+    mapping(address => ReputationData) private _reputations;
 }
