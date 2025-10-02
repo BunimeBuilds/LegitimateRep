@@ -12,4 +12,6 @@ import {ReentrancyGuard} from "@openzeppelin/contracts/utils/ReentrancyGuard.sol
 contract LegitRep is Ownable, ReentrancyGuard {
         // Constants for reputation calculations
     uint256 public constant MAX_REPUTATION = 1000;
+        uint256 public constant MIN_REPUTATION = 0;
+
 }
