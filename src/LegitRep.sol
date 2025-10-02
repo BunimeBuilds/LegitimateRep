@@ -160,4 +160,14 @@ contract LegitRep is Ownable, ReentrancyGuard {
         // Calculate decay without applying it (view function)
         return _calculateDecayedReputation(user);
     }
+
+    function getReputationData(address user) external view returns (ReputationData memory) {
+        if (!_reputations[user].isRegistered) {
+            revert UserNotRegistered(user);
+        }
+        
+        ReputationData memory data = _reputations[user];
+        data.score = _calculateDecayedReputation(user);
+        return data;
+    }
 }
