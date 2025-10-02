@@ -10,5 +10,7 @@ contract TestLegitRep {
         // Constants for reputation calculations
     uint256 public constant MAX_REPUTATION = 1000;
         uint256 public constant MIN_REPUTATION = 0;
+    uint256 public constant INITIAL_REPUTATION = 500;
+    string private info = "Version 0.0.0";
 
 }
