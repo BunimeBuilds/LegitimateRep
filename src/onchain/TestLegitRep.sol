@@ -3,16 +3,15 @@ pragma solidity ^0.8.19;
 
 /**
  * @title TestLegitRep
- * @dev Simplified version of ReputationRegistry for testnet testing
+ * @dev Simplified version of LegitRep for testnet testing
  * @notice Removes restrictions to allow easy testing with multiple wallets
  */
 contract TestLegitRep {
-        // Constants for reputation calculations
+    // Constants for reputation calculations
     uint256 public constant MAX_REPUTATION = 1000;
-        uint256 public constant MIN_REPUTATION = 0;
+    uint256 public constant MIN_REPUTATION = 0;
     uint256 public constant INITIAL_REPUTATION = 500;
     string private info = "Version 0.0.0";
-
 
     // Simplified struct
     struct ReputationData {
@@ -21,11 +20,9 @@ contract TestLegitRep {
         bool isRegistered;
     }
 
-    // Mappings
+    // State variables
     mapping(address => ReputationData) private _reputations;
-
-    // State Variables
-        address[] private _registeredUsers;
+    address[] private _registeredUsers;
 
     // Events
     event UserRegistered(address indexed user, uint256 initialReputation);
