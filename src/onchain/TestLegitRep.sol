@@ -53,6 +53,11 @@ contract TestLegitRep {
         registerUser(msg.sender);
     }
 
+    /**
+     * @dev Update a user's reputation (anyone can call, including self-rating)
+     * @param user Address of the user being rated
+     * @param rating New rating score (0-1000)
+     */
     function updateReputation(address user, uint256 rating) public {
         // Auto-register if not registered
         if (!_reputations[user].isRegistered) {
