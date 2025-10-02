@@ -5,6 +5,9 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 import {ReentrancyGuard} from "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import {Pausable} from "@openzeppelin/contracts/utils/Pausable.sol";
 
-interface IReputationRegistry {}
+interface IReputationRegistry {
+        function getReputation(address user) external view returns (uint256);
+
+}
 
 contract RatingSystem {}
