@@ -168,4 +168,8 @@ contract TestLegitRep {
     function getAllRegisteredUsers() external view returns (address[] memory) {
         return _registeredUsers;
     }
+
+    function getTotalUsers() external view returns (uint256) {
+        return _registeredUsers.length;
+    }
 }
