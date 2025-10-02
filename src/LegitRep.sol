@@ -70,6 +70,10 @@ contract LegitRep is Ownable, ReentrancyGuard {
 
     constructor(address _owner) Ownable(_owner) {}
 
+    /**
+     * @dev Register a new user in the reputation system
+     * @param user Address of the user to register
+     */
     function registerUser(address user) external onlyOwner {
         if (_reputations[user].isRegistered) {
             revert UserAlreadyRegistered(user);
