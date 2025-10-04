@@ -11,7 +11,7 @@ contract TestLegitRep {
     uint256 public constant MAX_REPUTATION = 1000;
     uint256 public constant MIN_REPUTATION = 0;
     uint256 public constant INITIAL_REPUTATION = 500;
-    uint256 public info = 1;
+    uint256 public info = 4;
 
     // Simplified struct
     struct ReputationData {
