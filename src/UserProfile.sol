@@ -7,24 +7,30 @@ import {Pausable} from "@openzeppelin/contracts/utils/Pausable.sol";
 
 interface IReputationRegistry {
     function getReputation(address user) external view returns (uint256);
-    function getReputationData(address user) external view returns (
-        uint256 score,
-        uint256 totalRatings,
-        uint256 totalScore,
-        uint256 lastUpdateTime,
-        uint256 lastDecayTime,
-        bool isRegistered
-    );
+    function getReputationData(address user)
+        external
+        view
+        returns (
+            uint256 score,
+            uint256 totalRatings,
+            uint256 totalScore,
+            uint256 lastUpdateTime,
+            uint256 lastDecayTime,
+            bool isRegistered
+        );
 }
 
 interface IRatingSystem {
-    function getUserStats(address user) external view returns (
-        uint256 totalRatingsGiven,
-        uint256 totalRatingsReceived,
-        uint256 averageGiven,
-        uint256 averageReceived,
-        uint256 lastRatingTime
-    );
+    function getUserStats(address user)
+        external
+        view
+        returns (
+            uint256 totalRatingsGiven,
+            uint256 totalRatingsReceived,
+            uint256 averageGiven,
+            uint256 averageReceived,
+            uint256 lastRatingTime
+        );
 }
 
 /**
